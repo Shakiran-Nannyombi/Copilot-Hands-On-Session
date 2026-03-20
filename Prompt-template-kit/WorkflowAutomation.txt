@@ -1,0 +1,9 @@
+Task: Automate a workflow for [specific process]
+Title: Automate Workflow
+Context:
+- Who: [Team or role benefiting from automation]
+- What: [Deliverable, e.g., script, pipeline]
+- Why: Save time and reduce manual effort
+- Where: [Environment, e.g., local dev, CI/CD]
+Constraints:
+- Keep steps clear and modular

@@ -1,0 +1,9 @@
+Task: Add unit tests to my project
+Title: Create Test Suite
+Context:
+- Who: Developers maintaining the project
+- What: Test files for [specific functions/modules]
+- Why: Ensure reliability and catch bugs early
+- Where: Project’s test folder
+Constraints:
+- Use [testing framework, e.g., pytest, Jest]

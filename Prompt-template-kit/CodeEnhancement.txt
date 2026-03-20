@@ -1,0 +1,9 @@
+Task: Improve existing code for readability and performance
+Title: Refactor Code
+Context:
+- Who: Developers maintaining the project
+- What: Refactored version of [file/function]
+- Why: Improve maintainability and efficiency
+- Where: Project folder
+Constraints:
+- Add comments, follow best practices

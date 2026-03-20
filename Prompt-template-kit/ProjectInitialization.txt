@@ -1,0 +1,9 @@
+Task: Create a starter project in [language/framework]
+Title: Initialize Project
+Context:
+- Who: [Target audience, e.g., developers, students]
+- What: [Deliverable, e.g., basic app, CLI tool, documentation site]
+- Why: [Purpose, e.g., demo, learning, prototype]
+- Where: [Environment, e.g., workshop, production]
+Constraints:
+- Keep it minimal and easy to run

@@ -1,0 +1,9 @@
+Task: Research [topic] and create a summary
+Title: Research Summary
+Context:
+- Who: [Audience, e.g., team, stakeholders]
+- What: [Deliverable, e.g., 1-page summary, slide deck]
+- Why: Inform decision-making
+- Where: [Workshop, project planning]
+Constraints:
+- Include top 3 insights, keep concise

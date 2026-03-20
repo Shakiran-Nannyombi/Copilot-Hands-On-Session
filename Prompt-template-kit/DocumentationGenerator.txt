@@ -1,0 +1,9 @@
+Task: Generate documentation for my project
+Title: Write Project Docs
+Context:
+- Who: [Audience, e.g., new developers, end-users]
+- What: [Deliverable, e.g., README.md, API docs]
+- Why: [Purpose, e.g., onboarding, clarity]
+- Where: [Project folder]
+Constraints:
+- Use clear language, include examples
