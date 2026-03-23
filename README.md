@@ -2,13 +2,13 @@
 
 ![GitHub Copilot agent interface showing agentic workflow capabilities with modern design elements and gradient styling](./assets/agent.png)
 
-## Welcome to the **Copilot Hands-On Training Repository**.  
+## Welcome to the **Copilot Hands-On Training Repository**  
 
 This repo is designed to help developers and learners explore **GitHub Copilot’s agentic mode** and **Copilot CLI** in a practical, hands-on way.
 
 ---
 
-## 🚀 What You’ll Learn
+## What You’ll Learn
 
 - How Copilot goes beyond Q&A into **agentic workflows**
 - Using **Copilot CLI** to create, refine, and automate projects
@@ -107,7 +107,7 @@ Use the templates in `Prompt-template-kit/` to:
 
 ---
 
-## 🚀 GitHub Pages Deployment
+## GitHub Pages Deployment
 
 This repository includes an automated GitHub Pages deployment workflow for the health club site.
 
@@ -138,6 +138,7 @@ gh api \
 ```
 
 Or manually:
+
 1. Go to **Settings** → **Pages**
 2. Under "Build and deployment", set **Source** to "GitHub Actions"
 
