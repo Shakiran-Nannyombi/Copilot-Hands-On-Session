@@ -12,9 +12,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: Inter, system-ui, sans-serif;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.28), transparent 55%),
-    #12061F;
+  background: #12061F;
   color: #EDE9FE;
 }
 

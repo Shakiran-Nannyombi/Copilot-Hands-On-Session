@@ -21,7 +21,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/tutorial"
-              className="rounded-xl bg-bloom px-5 py-3 text-sm font-semibold text-white shadow-glow hover:bg-purple-500"
+              className="rounded-xl bg-bloom px-5 py-3 text-sm font-semibold text-white hover:bg-purple-500"
             >
               Open tutorial
             </Link>
@@ -33,7 +33,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="overflow-hidden rounded-3xl border border-white/10 shadow-glow">
+        <div className="overflow-hidden rounded-3xl border border-white/10">
           <img src="/banner.png" alt="Copilot agentic workshop banner" className="h-full w-full object-cover" />
         </div>
       </section>

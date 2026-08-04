@@ -47,7 +47,7 @@ Backend API runs on `http://127.0.0.1:8000`.
 ## 3. Run Frontend
 
 ```bash
-cd "blog tracker/frontend"
+cd "blog tracker/frontend-vue"
 cp .env.example .env
 npm install
 npm run dev

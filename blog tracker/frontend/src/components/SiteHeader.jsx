@@ -15,7 +15,7 @@ export default function SiteHeader() {
           alt=""
           width={40}
           height={40}
-          className="rounded-xl ring-1 ring-bloom/40 transition group-hover:ring-glow"
+          className="rounded-xl ring-1 ring-bloom/40 transition group-hover:ring-bloom/70"
         />
         <div>
           <p className="font-display text-lg font-semibold text-white">Copilot Hands-On</p>
@@ -31,7 +31,7 @@ export default function SiteHeader() {
             className={({ isActive }) =>
               `rounded-xl px-3.5 py-2 text-sm font-medium transition ${
                 isActive
-                  ? 'bg-bloom text-white shadow-glow'
+                  ? 'bg-bloom text-white'
                   : 'border border-white/15 text-mist/80 hover:border-bloom/50 hover:text-white'
               }`
             }

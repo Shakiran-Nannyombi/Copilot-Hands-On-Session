@@ -15,9 +15,6 @@ export default {
         display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
-      boxShadow: {
-        glow: '0 0 40px rgba(139, 92, 246, 0.25)',
-      },
     },
   },
   plugins: [],
