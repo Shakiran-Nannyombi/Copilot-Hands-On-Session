@@ -14,9 +14,13 @@ Full-stack blog tracking website using **Vue + Tailwind CSS** (frontend) and **F
 
 ```text
 blog tracker/
-├── frontend/   # Vue + Tailwind CSS
-└── backend/    # FastAPI + SQLite + Notion integration
+├── frontend/       # Session hub (React) — what Vercel deploys for the workshop homepage
+├── frontend-vue/   # Original Vue + Tailwind Blog Tracker UI
+└── backend/        # FastAPI + SQLite + Notion integration
 ```
+
+> The live Vercel hostname serves the **Copilot session hub** from `frontend/`.
+> To run the Blog Tracker UI locally, use `frontend-vue/` with the FastAPI backend.
 
 ## 1. Run Backend
 

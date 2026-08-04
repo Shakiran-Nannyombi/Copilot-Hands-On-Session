@@ -1,17 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
       colors: {
-        midnight: '#05070f',
-        ink: '#0b1220',
-        navy: '#102542',
-        steel: '#1e3a5f',
-        sky: '#1d4ed8',
-        cyan: '#38bdf8',
+        ink: '#12061F',
+        panel: '#1E0B3C',
+        grape: '#4C1D95',
+        bloom: '#8B5CF6',
+        glow: '#C4B5FD',
+        mist: '#EDE9FE',
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        glow: '0 0 40px rgba(139, 92, 246, 0.25)',
       },
     },
   },
   plugins: [],
-}
+};
