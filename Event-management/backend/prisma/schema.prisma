@@ -1,0 +1,176 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  ORGANIZER
+  ADMIN
+}
+
+enum EventStatus {
+  DRAFT
+  PUBLISHED
+  ONGOING
+  COMPLETED
+  CANCELLED
+}
+
+enum EventMode {
+  ONLINE
+  OFFLINE
+  HYBRID
+}
+
+enum AttendanceStatus {
+  REGISTERED
+  CHECKED_IN
+  ABSENT
+  CANCELLED
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  password     String
+  firstName    String
+  lastName     String
+  role         Role      @default(STUDENT)
+  studentId    String?   @unique
+  profileImage String?
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  // Relations
+  organizedEvents Event[]       @relation("OrganizerEvents")
+  attendances     Attendance[]
+  feedbacks       Feedback[]
+  notifications   Notification[]
+
+  @@map("users")
+}
+
+model Event {
+  id           String      @id @default(uuid())
+  title        String
+  description  String
+  startDate    DateTime
+  endDate      DateTime
+  location     String?
+  onlineLink   String?
+  mode         EventMode   @default(OFFLINE)
+  status       EventStatus @default(DRAFT)
+  capacity     Int?
+  coverImage   String?
+  tags         String[]
+  organizerId  String
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  // Relations
+  organizer    User          @relation("OrganizerEvents", fields: [organizerId], references: [id])
+  attendances  Attendance[]
+  feedbacks    Feedback[]
+  logistics    Logistics[]
+  schedules    Schedule[]
+  notifications Notification[]
+
+  @@map("events")
+}
+
+model Attendance {
+  id           String           @id @default(uuid())
+  userId       String
+  eventId      String
+  status       AttendanceStatus @default(REGISTERED)
+  checkInTime  DateTime?
+  checkOutTime DateTime?
+  qrCode       String?          @unique
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+
+  // Relations
+  user         User   @relation(fields: [userId], references: [id])
+  event        Event  @relation(fields: [eventId], references: [id])
+
+  @@unique([userId, eventId])
+  @@map("attendances")
+}
+
+model Feedback {
+  id          String   @id @default(uuid())
+  userId      String
+  eventId     String
+  rating      Int
+  comment     String?
+  isAnonymous Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user        User   @relation(fields: [userId], references: [id])
+  event       Event  @relation(fields: [eventId], references: [id])
+
+  @@unique([userId, eventId])
+  @@map("feedbacks")
+}
+
+model Logistics {
+  id         String   @id @default(uuid())
+  eventId    String
+  item       String
+  quantity   Int      @default(1)
+  status     String   @default("pending")
+  notes      String?
+  assignedTo String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relations
+  event      Event  @relation(fields: [eventId], references: [id])
+
+  @@map("logistics")
+}
+
+model Schedule {
+  id          String   @id @default(uuid())
+  eventId     String
+  title       String
+  description String?
+  startTime   DateTime
+  endTime     DateTime
+  speaker     String?
+  location    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  event       Event  @relation(fields: [eventId], references: [id])
+
+  @@map("schedules")
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  eventId   String?
+  title     String
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  // Relations
+  user      User   @relation(fields: [userId], references: [id])
+  event     Event? @relation(fields: [eventId], references: [id])
+
+  @@map("notifications")
+}
