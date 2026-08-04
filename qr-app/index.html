@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Studio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <h1>QR Studio</h1>
+        <p>Create QR codes from URLs, then share as PNG or files.</p>
+      </header>
+
+      <section class="panel">
+        <h2>QR Generator</h2>
+        <label for="urlInput">URL</label>
+        <input id="urlInput" type="url" placeholder="https://example.com" />
+
+        <div class="inline-fields">
+          <div>
+            <label for="sizeInput">Size (px)</label>
+            <input id="sizeInput" type="number" min="128" max="1024" value="320" />
+          </div>
+          <div>
+            <label for="marginInput">Margin</label>
+            <input id="marginInput" type="number" min="0" max="8" value="2" />
+          </div>
+        </div>
+
+        <button id="generateBtn">Generate QR</button>
+        <p id="statusText" aria-live="polite"></p>
+
+        <div class="qr-preview">
+          <canvas id="qrCanvas" width="320" height="320"></canvas>
+        </div>
+
+        <div class="actions">
+          <button id="downloadPngBtn" disabled>Download PNG</button>
+          <button id="downloadFileBtn" disabled>Download URL File</button>
+          <button id="sharePngBtn" disabled>Share PNG</button>
+          <button id="shareFileBtn" disabled>Share URL File</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Interface Templates</h2>
+        <label for="templateSelect">Template</label>
+        <select id="templateSelect"></select>
+
+        <div class="inline-fields">
+          <div>
+            <label for="templateName">Template Name</label>
+            <input id="templateName" type="text" placeholder="My Template" />
+          </div>
+          <div>
+            <label for="radiusInput">Corner Radius</label>
+            <input id="radiusInput" type="number" min="0" max="40" value="14" />
+          </div>
+        </div>
+
+        <div class="color-grid">
+          <div>
+            <label for="bgColorInput">Background</label>
+            <input id="bgColorInput" type="color" value="#f5f7fb" />
+          </div>
+          <div>
+            <label for="panelColorInput">Panel</label>
+            <input id="panelColorInput" type="color" value="#ffffff" />
+          </div>
+          <div>
+            <label for="textColorInput">Text</label>
+            <input id="textColorInput" type="color" value="#151a29" />
+          </div>
+          <div>
+            <label for="accentColorInput">Accent</label>
+            <input id="accentColorInput" type="color" value="#335dff" />
+          </div>
+          <div>
+            <label for="qrDarkInput">QR Foreground</label>
+            <input id="qrDarkInput" type="color" value="#151a29" />
+          </div>
+          <div>
+            <label for="qrLightInput">QR Background</label>
+            <input id="qrLightInput" type="color" value="#ffffff" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="applyTemplateBtn">Apply</button>
+          <button id="saveTemplateBtn">Save / Update</button>
+          <button id="deleteTemplateBtn">Delete</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
