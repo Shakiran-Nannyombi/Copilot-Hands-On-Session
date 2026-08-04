@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install --prefix session-site",
+  "buildCommand": "npm run build --prefix session-site",
+  "outputDirectory": "session-site/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

@@ -19,19 +19,24 @@ This repo is designed to help developers and learners explore **GitHub Copilot�
 
 ## Repository Structure
 
-- **CopilotHands-OnTraining/** → Workshop materials and examples
-- **Prompt-template-kit/** → Reusable prompt templates for projects
-- **health-club-site/** → React health club website (deployed on GitHub Pages)
-- **lets-Eat/** → Full-stack restaurant menu app (Vue + Python Flask)
+- **session-site/** → Purple workshop hub (projects gallery + tutorial) — deployed on Vercel
+- **health-club-site/** → React health club website (also on GitHub Pages)
+- **health-club-app/** → Companion React events/organizers app
+- **lets-Eat/** → Full-stack restaurant menu app (Vue + Flask)
+- **blog tracker/** → Blog series/deadline tracker (Vue + FastAPI)
+- **Event-management/** → Campus events, QR attendance, web + mobile
+- **qr-app/** → Lightweight QR workshop demo
+- **Prompt-template-kit/** → Reusable Copilot prompt templates
+- **CopilotHands-OnTrainingDeck/** → Session slide decks
 - **.github/** → GitHub workflows and automation
 
 ---
 
-## 🌐 Live Demo
+## Live hubs
 
-**Health Club Site**: [https://shakiran-nannyombi.github.io/Copilot-Hands-On-Session/](https://shakiran-nannyombi.github.io/Copilot-Hands-On-Session/)
-
-The health club site is automatically deployed to GitHub Pages using GitHub Actions. Any changes pushed to the `health-club-site/` folder will trigger an automatic rebuild and deployment.
+- **Session site (Vercel):** [https://copilot-hands-on-session.vercel.app/](https://copilot-hands-on-session.vercel.app/)
+- **Tutorial:** [https://copilot-hands-on-session.vercel.app/tutorial](https://copilot-hands-on-session.vercel.app/tutorial)
+- **Health Club (GitHub Pages):** [https://shakiran-nannyombi.github.io/Copilot-Hands-On-Session/](https://shakiran-nannyombi.github.io/Copilot-Hands-On-Session/)
 
 ---
 
